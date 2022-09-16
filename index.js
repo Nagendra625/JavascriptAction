@@ -9,13 +9,9 @@ try {
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
 
-    // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`);
-
     const organizationId = core.getInput('organizationId');
     const projectId = core.getInput('projectId');
-    const testplanid = core.getInput('testplanid');    
+    const testplanid = core.getInput('testplanid');
     const testsuiteid = core.getInput('testsuiteid');
     const patToken = core.getInput('PAT_TOKEN')
 
