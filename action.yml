@@ -5,6 +5,26 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  organizationId:
+    description: 'Organization ID for the given Azure Devops'
+    required: true
+    default: 'I29603'
+  projectId:
+    description: 'project ID to get the specific project in Azure Devops'
+    required: true
+    default: 'I29603'
+  testplanid:
+    description: 'Test Plan ID to get that specific testPlanId'
+    required: true
+    default: 1
+  testsuiteid:
+    description: 'Test Suite to get that specific testSuite ID'
+    required: true
+    default: 2
+  PAT_TOKEN:
+    description: 'PAT_TOKEN is a token used to connect to the specific Azure Devops'
+    required: true
+    default: 'tcfbtg6mlccz5swfhjyjvja3nd3gxyd64nvx7j3eu3wnxujho2qq'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
