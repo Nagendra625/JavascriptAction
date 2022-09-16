@@ -10920,19 +10920,9 @@ const github = __nccwpck_require__(504);
 const XMLHttpRequest = __nccwpck_require__(7577);
 try {
 
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
-    console.log(`Hello ${nameToGreet}!`);
-    const time = (new Date()).toTimeString();
-    core.setOutput("time", time);
-
-    // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`);
-
     const organizationId = core.getInput('organizationId');
     const projectId = core.getInput('projectId');
-    const testplanid = core.getInput('testplanid');    
+    const testplanid = core.getInput('testplanid');
     const testsuiteid = core.getInput('testsuiteid');
     const patToken = core.getInput('PAT_TOKEN')
 
