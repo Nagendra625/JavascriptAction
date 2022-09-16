@@ -3,12 +3,6 @@ const github = require('@actions/github');
 const XMLHttpRequest = require('xhr2');
 try {
 
-    // `who-to-greet` input defined in action metadata file
-    const nameToGreet = core.getInput('who-to-greet');
-    console.log(`Hello ${nameToGreet}!`);
-    const time = (new Date()).toTimeString();
-    core.setOutput("time", time);
-
     const organizationId = core.getInput('organizationId');
     const projectId = core.getInput('projectId');
     const testplanid = core.getInput('testplanid');
@@ -23,7 +17,7 @@ try {
 
     request.onload = function () {
         // Begin accessing JSON data here
-        
+
         var data = JSON.parse(this.response)
 
         if (request.status >= 200 && request.status < 400) {
