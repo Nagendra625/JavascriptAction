@@ -18,7 +18,6 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: octocat/hello-world-javascript-action@v1.1
         with:
           organizationId: 'I29603'
           projectId: 'I29603'
