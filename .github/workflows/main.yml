@@ -18,6 +18,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
+        uses: Nagendra625/JavascriptAction@v1.8
         with:
           organizationId: 'I29603'
           projectId: 'I29603'
